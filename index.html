@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer>
+      function CalculateIndex(notes) {
+        let index = 0;
+        for (let i = 0; i < notes.length; i++) {
+          index += notes[i] / 25.0;
+        }
+
+        index = Math.round((index / notes.length) * 100) / 100;
+        console.log(index);
+        return index;
+      }
+
+      function calculateClick() {
+        noteInputs = document.querySelectorAll(".note-input");
+        let notes = [];
+        noteInputs.forEach((noteInput) => {
+          notes.push(noteInput.value);
+        });
+
+        indexResult = document.querySelector(".index-result");
+        indexResult.textContent = CalculateIndex(notes);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="page-title">Index Calculator</h1>
+    <div class="notes-container">
+      <input class="note-input" type="number" placeholder="Note 1" value="96" />
+      <input class="note-input" type="number" placeholder="Note 2" value="99" />
+      <input
+        class="note-input"
+        type="number"
+        placeholder="Note 3"
+        value="100"
+      />
+      <input class="note-input" type="number" placeholder="Note 4" value="98" />
+      <input class="note-input" type="number" placeholder="Note 5" value="99" />
+      <input class="note-input" type="number" placeholder="Note 6" value="96" />
+      <input class="note-input" type="number" placeholder="Note 7" value="96" />
+      <input class="note-input" type="number" placeholder="Note 8" value="99" />
+      <input class="note-input" type="number" placeholder="Note 9" value="95" />
+      <input
+        class="note-input"
+        type="number"
+        placeholder="Note 10"
+        value="98"
+      />
+      <input
+        class="note-input"
+        type="number"
+        placeholder="Note 11"
+        value="95"
+      />
+      <input
+        class="note-input"
+        type="number"
+        placeholder="Note 12"
+        value="100"
+      />
+    </div>
+    <button class="calculate-button" onclick="calculateClick()">
+      Calculate
+    </button>
+    <h2 class="index-result"></h2>
+  </body>
+</html>

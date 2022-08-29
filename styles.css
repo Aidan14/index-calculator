@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family:'Roboto', 'sans-serif';
+    font-size: 16px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+body {
+    background-image: linear-gradient(45deg, rgba(16,16,33,1) 0%, rgba(217,220,226,1) 100%);;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-size: cover;
+}
+
+.page-title {
+    color: white;
+    text-align: center;
+    margin: 40px 0;
+    font-size: 30px;
+}
+
+.notes-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 10px;
+}
+
+.note-input {
+    background-color: transparent;
+    border: 1px solid white;
+    align-items: center;
+    margin: 5px auto;
+    padding: 10px;
+    width: 100px;
+    color: white;
+    -webkit-appearance: none;
+}
+
+.calculate-button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.calculate-button:hover {
+    box-shadow: inset white 150px 0 0 1px;
+    color: black;
+}
+
+.index-result {
+    color: white;
+    font-size: 60px;
+    padding: 100px;
+}

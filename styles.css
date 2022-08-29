@@ -55,6 +55,10 @@ body {
     -webkit-appearance: none;
 }
 
+.note-input::placeholder {
+    color: rgb(239, 239, 239);
+}
+
 .calculate-button {
     background-color: transparent;
     border: 1px solid white;
